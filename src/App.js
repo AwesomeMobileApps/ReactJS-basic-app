@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import CardList from './CardList';
 import SearchBox from './SearchBox';
-import { robots } from './robots';
+
+const jsonApiUri = 'https://jsonplaceholder.typicode.com/users';
 
 class App extends Component {
-  const API_URL = 'https://jsonplaceholder.typicode.com/users';
-	
   constructor() {
     super();
 
@@ -16,7 +15,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch(API_URL)
+    fetch(jsonApiUri)
       .then(response => response.json())
       .then(users => this.setState({'robots': users});
   }
