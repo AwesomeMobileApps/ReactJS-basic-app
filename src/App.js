@@ -4,13 +4,21 @@ import SearchBox from './SearchBox';
 import { robots } from './robots';
 
 class App extends Component {
+  const API_URL = 'https://jsonplaceholder.typicode.com/users';
+	
   constructor() {
     super();
 
     this.state = {
-      robots: robots,
+      robots: [],
       searchField: ''
     }
+  }
+
+  componentDidMount() {
+	  fetch(API_URL)
+	  .then(response => response.json())
+	  .then(users => this.setState({'robots': users});
   }
 
   onSearchChange = (event) => {
@@ -26,13 +34,17 @@ class App extends Component {
       }
     );
 
-    return (
-      <div className="tc">
-        <h1>Robot App</h1>
-        <SearchBox searchChange={this.onSearchChange} />
-        <CardList robots={filterRobots} />
-      </div>
-    )
+	if (this.state.robots.length == 0) {
+	  return <h3 className="f1">Loading...<h3>
+	} else {
+      return (
+        <div className="tc">
+          <h1 className="f1">Robot App</h1>
+          <SearchBox searchChange={this.onSearchChange} />
+          <CardList robots={filterRobots} />
+        </div>
+      )
+    }
   }
 }
 
