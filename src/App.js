@@ -16,9 +16,9 @@ class App extends Component {
   }
 
   componentDidMount() {
-	  fetch(API_URL)
-	  .then(response => response.json())
-	  .then(users => this.setState({'robots': users});
+    fetch(API_URL)
+      .then(response => response.json())
+      .then(users => this.setState({'robots': users});
   }
 
   onSearchChange = (event) => {
@@ -34,9 +34,9 @@ class App extends Component {
       }
     );
 
-	if (this.state.robots.length == 0) {
-	  return <h3 className="f1">Loading...<h3>
-	} else {
+    if (this.state.robots.length == 0) {
+      return <h3 className="f1">Loading...<h3>
+    } else {
       return (
         <div className="tc">
           <h1 className="f1">Robot App</h1>
