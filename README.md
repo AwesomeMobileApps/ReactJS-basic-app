@@ -1,8 +1,8 @@
 # ReactJS basic app
 
-This ReactJS webapp was bootstrapped thanks [Create React App](https://github.com/facebook/create-react-app).
+This ReactJS webapp was bootstrapped thanks to [Create React App](https://github.com/facebook/create-react-app).
 
-It is a really basic app. Nothing really special here... 🙂
+It is a really basic app, using JSONPlaceholder and RoboHash external APIs for loading and displaying dummy data. Nothing really special here... 🙂 
 
 
 ## Author
