@@ -7,7 +7,7 @@ It is a really basic app, using JSONPlaceholder and RoboHash external APIs for l
 
 ## Author
 
-I'm [Pierre-Henry Soria](http://ph7.me), a SUPER Passionate, enthusiasm software engineer 🤖
+I'm [Pierre-Henry Soria](https://ph7.me), a SUPER Passionate, enthusiasm software engineer 🤖
 
 I love reading too (non-fiction books), and learning new things every single day!
 
